@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Preview from "../components/Preview";
 import Home from "../pages/Home";
@@ -8,7 +8,7 @@ import Register from "../pages/Register";
 const AppRoutes = () => {
   return (
     <Routes>
-      <Route path="/" element={<Home />} >
+      <Route path="/" element={<Home />}>
         <Route path=":bookId" element={<Preview />} />
       </Route>
       <Route path="/book/:bookId" element={<Info />} />
@@ -17,7 +17,7 @@ const AppRoutes = () => {
       <Route path="*" element={<h1>404 pagina não encontrada</h1>} />
     </Routes>
   );
-
+};
 // LINK
 // useNavigate
 
